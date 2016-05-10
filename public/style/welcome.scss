@@ -1,6 +1,87 @@
 $backColor: #151418;
+$darkGray: #3b3a3c;
+$borderGray: #858686;
+$shade: #29292a;
 $idahoImg: "https://establishbrotherhood.files.wordpress.com/2016/03/img_2307-2.jpg?w=1100&h=500&crop=1";
 body {
-    color: white;
+    color: #d2d3d7;
     background: $backColor;
+}
+.welcomeBackground {
+    background-image: url($idahoImg);
+    -webkit-filter: grayscale(50%);
+    background-repeat: no-repeat;
+    height: 90%;
+    width: 90%;
+    left: 140px;;
+    position: absolute;
+
+}
+.welcomeBackground h1 {
+    top: 25%;
+    left: 50px;
+    position: absolute;
+    opacity: 0.7;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+header {
+    height: 100px;
+    width: 100%;
+    background: $darkGray;
+    background: linear-gradient($darkGray, $shade);
+    border-radius: 7px;
+    border: 2px solid $borderGray;
+}
+.logoDiv{
+  border-right: 2px solid $borderGray;
+border-radius: 5px;
+  width: 150px;
+  height: 97px;
+}
+.logoDiv img{
+  height: 150px;
+  top: 5px;
+  min-width: 130px;
+  position:absolute;
+  -webkit-filter: invert(1);
+   filter: invert(1);
+}
+.addContest{
+  right: 0px;
+  top: 0px;
+  padding-top: 70px;
+  height: 100px;
+  width: 130px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  border:  2px solid $borderGray;
+  border-radius: 5px;
+}
+.loginButton{
+  right:130px;
+  top: 0px;
+  padding-top: 70px;
+  height: 100px;
+  width: 130px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  border:  2px solid $borderGray;
+
+}
+.addContest:hover{
+  background: $darkGray;
+  cursor: pointer;
+  color:white;
+    border:  2px solid white;
+}
+.loginButton:hover{
+  background: $darkGray;
+  cursor: pointer;
+  color:white;
+    border:  2px solid white;
 }
