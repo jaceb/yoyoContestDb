@@ -17,10 +17,10 @@
 
 <body ng-controller="viewCtrl">
     <header>
-        <div class="logoDiv"><img src="Drawing.png" alt="" /></div>
+        <div class="logoDiv" ui-sref="welcome"><img src="Drawing.png" alt="" /></div>
 
-        <div class="loginButton">LOGIN</div>
-        <div class="addContest">
+        <div class="loginButton" ui-sref="login">LOGIN</div>
+        <div class="addContest" ui-sref="addContest">
           + Add Contest
         </div>
     </header>

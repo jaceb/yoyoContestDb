@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAIA,cAAc;EACZ,UAAU,EAAE,MAAM;EAClB,KAAK,EAJM,OAAO",
+"sources": ["addContest.scss"],
 "names": [],
 "file": "addContest.css"
 }
