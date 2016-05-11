@@ -18,10 +18,11 @@
 <body ng-controller="viewCtrl">
     <header>
         <div class="logoDiv" ui-sref="welcome"><img src="Drawing.png" alt="" /></div>
+        <div class="browseButton" ui-sref="results">Browse </div>
 
-        <div class="loginButton" ui-sref="login">LOGIN</div>
+        <div class="loginButton" ui-sref="login">Admin Login</div>
         <div class="addContest" ui-sref="addContest">
-          + Add Contest
+          + Submit a Contest Result
         </div>
     </header>
     <ui-view></ui-view>
@@ -34,13 +35,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
 
-    <script src="../js/app.js"></script>
-    <script src="../js/controllers/viewCtrl.js"></script>
-    <script src="../js/controllers/welcomeCtrl.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/viewCtrl.js"></script>
+    <!-- <script src="../js/controllers/welcomeCtrl.js"></script>
     <script src="../js/controllers/loginCtrl.js"></script>
     <script src="../js/controllers/dashCtrl.js"></script>
     <script src="../js/controllers/adminCtrl.js"></script>
-    <script src="../js/controllers/addContestCtrl.js"></script>
+    <script src="../js/controllers/addContestCtrl.js"></script> -->
 </body>
 
 </html>

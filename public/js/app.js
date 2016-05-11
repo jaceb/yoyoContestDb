@@ -4,33 +4,33 @@ angular.module('myApp', ['ui.router'])
         $stateProvider
             .state('welcome', {
                 url: '/',
-                controller: 'welcomeCtrl',
-                templateUrl: '../public/templates/welcomeTmpl.html'
+                // controller: 'welcomeCtrl',
+                templateUrl: 'templates/welcomeTmpl.html'
             })
             .state('results', {
                 url: '/results',
-                controller: 'welcomeCtrl',
-                templateUrl: '../public/templates/resultsTmpl.html'
+                // controller: 'welcomeCtrl',
+                templateUrl: 'templates/resultsTmpl.html'
             })
             .state('login', {
                 url: '/login',
-                controller: 'loginCtrl',
-                templateUrl: '../public/templates/loginTmpl.html'
+                // controller: 'loginCtrl',
+                templateUrl: 'templates/loginTmpl.html'
             })
             .state('dashboard', {
                 url: '/dashboard',
-                controller: 'dashCtrl',
-                templateUrl: '../public/templates/dashTmpl.html'
+                // controller: 'dashCtrl',
+                templateUrl: 'templates/dashTmpl.html'
             })
             .state('admin', {
                 url: '/admin',
-                controller: 'adminCtrl',
-                templateUrl: '../public/templates/adminTmpl.html'
+                // controller: 'adminCtrl',
+                templateUrl: 'templates/adminTmpl.html'
             })
             .state('addContest', {
                 url: '/addContest',
-                controller: 'addContestCtrl',
-                templateUrl: '../public/templates/addContestTmpl.html'
+                // controller: 'addContestCtrl',
+                templateUrl: 'templates/addContestTmpl.html'
             });
         $urlRouterProvider
             .otherwise('/');

@@ -1,5 +1,5 @@
 {
-  "name": "public",
+  "name": "Contest Result DB",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,10 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "lodash": "^4.12.0",
-    "mongoose": "^4.4.16"
+    "mongoose": "^4.4.16",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.0"
   }
 }
