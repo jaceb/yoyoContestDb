@@ -16,12 +16,13 @@ app.use(express.static(__dirname + "/public"));
 passport.use(new FacebookStrategy({
   clientID: keys.facebookKey,
   clientSecret: keys.facebookSecret,
-  callbackUrl: 'http://localhost:4000/auth/facebook/callback',
+  callbackURL: 'http://localhost:4000/auth/facebook/callback',
 }, function(token, refreshToken, profile, done){
   return done(null, profile);
 }));
-app.get('/auth/facebook', passport.authenticate('facebook', {
-  successRedirect: '/dashboard',
+app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+  successRedirect: '/#/dashboard',
   failureRedirect: '/auth/facebook'
 }))
 passport.serializeUser(function(user, done){
@@ -29,7 +30,7 @@ passport.serializeUser(function(user, done){
 });
 
 passport.deserializeUser(function(obj, done){
-  done(null, user);
+  done(null, obj);
 });
 
 mongoose.connect('mongodb://localhost/contestData')
