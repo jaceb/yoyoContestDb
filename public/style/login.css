@@ -8,4 +8,16 @@
   bottom: 100px;
   right: 42%; }
 
+.localLogin {
+  text-align: center; }
+
+.localLogin > input {
+  display: inline;
+  width: 200px;
+  cursor: text; }
+
+button {
+  background: #3b3a3c;
+  color: white; }
+
 /*# sourceMappingURL=login.css.map */

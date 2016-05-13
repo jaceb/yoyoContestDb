@@ -1,3 +1,17 @@
-angular.module('myApp').controller('addContestCtrl', function($scope){
+var Contest = require("../schemas/contestSchema.js");
 
-});
+module.exports = {
+
+    Create: function(req, res, next) {
+        var newContest = new Contest(req.body);
+        newContest.save(function(err, response) {
+            if (err) {
+                res.status(500).json(err;)
+            } else {
+                res.status(200).json(response)
+            }
+
+        })
+    },
+    
+}

@@ -12,3 +12,15 @@ $shade: #29292a;
     bottom: 100px;
     right: 42%;
 }
+.localLogin{
+  text-align: center;
+}
+.localLogin > input{
+  display: inline;
+  width: 200px;
+  cursor: text;
+}
+button{
+  background:$darkGray;
+  color:white;
+}

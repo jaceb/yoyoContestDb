@@ -1,6 +1,28 @@
+select {
+  cursor: pointer;
+  font-family: 'Roboto Mono', sans-serif; }
+
 .phonyData {
   position: absolute;
-  top: 200px;
-  left: 15%; }
+  top: 220px;
+  left: 10px; }
+
+.box {
+  height: 60px;
+  width: 200px;
+  padding: 10px;
+  background: #3b3a3c;
+  border-radius: 2px;
+  border-right: #858686 solid 2px;
+  border-left: #858686 solid 2px;
+  border-top: #151418 solid 2px; }
+
+.resultHeader {
+  height: 200px;
+  position: absolute;
+  top: -110px;
+  left: 250px;
+  -webkit-filter: grayscale(70%);
+  opacity: 0.65; }
 
 /*# sourceMappingURL=results.css.map */

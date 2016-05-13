@@ -1,5 +1,34 @@
-.phonyData{
+$backColor: #151418;
+$darkGray: #3b3a3c;
+$borderGray: #858686;
+$shade: #29292a;
+select{
+  cursor: pointer;
+  font-family: 'Roboto Mono', sans-serif;
+  
+
+}
+.phonyData {
+    position: absolute;
+    top: 220px;
+    left: 10px;
+}
+.box {
+    height: 60px;
+    width: 200px;
+    padding: 10px;
+    background: $darkGray;
+    border-radius: 2px;
+    border-right: $borderGray solid 2px;
+    border-left: $borderGray solid 2px;
+    border-top: $backColor solid 2px;
+
+}
+.resultHeader{
+  height: 200px;
   position: absolute;
-  top: 200px;
-  left: 15%;
+  top: -110px;
+  left:250px;;
+  -webkit-filter: grayscale(70%);
+  opacity: 0.65;
 }
