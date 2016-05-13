@@ -1,6 +1,7 @@
 .loginMain {
   text-align: center;
-  color: #858686; }
+  color: #858686;
+  font-size: 32px; }
 
 .facebookLoginButton {
   cursor: pointer;
@@ -9,15 +10,29 @@
   right: 42%; }
 
 .localLogin {
-  text-align: center; }
+  width: 100%;
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  height: 400px;
+  padding-left: 600px;
+  padding-right: 600px; }
 
-.localLogin > input {
-  display: inline;
-  width: 200px;
+.localLogin > div > input {
+  width: 100%;
   cursor: text; }
 
-button {
-  background: #3b3a3c;
-  color: white; }
+h3 {
+  font-family: 'Roboto Mono', sans-serif;
+  color: #858686;
+  text-align: center;
+  border: 50px;
+  padding: 10px; }
+
+.inputBox {
+  height: 70px; }
+
+input {
+  border-radius: 10px; }
 
 /*# sourceMappingURL=login.css.map */

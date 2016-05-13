@@ -17,6 +17,17 @@ select {
   border-left: #858686 solid 2px;
   border-top: #151418 solid 2px; }
 
+.buttonBox {
+  height: 60px;
+  width: 200px;
+  padding-top: 20px;
+  padding-left: 5px;
+  background: #3b3a3c;
+  border-radius: 2px;
+  border-right: #858686 solid 2px;
+  border-left: #858686 solid 2px;
+  border-top: #151418 solid 2px; }
+
 .resultHeader {
   height: 200px;
   position: absolute;

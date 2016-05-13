@@ -5,6 +5,7 @@ $shade: #29292a;
 .loginMain {
     text-align: center;
     color: $borderGray;
+    font-size: 32px;
 }
 .facebookLoginButton {
     cursor: pointer;
@@ -12,15 +13,29 @@ $shade: #29292a;
     bottom: 100px;
     right: 42%;
 }
-.localLogin{
-  text-align: center;
+.localLogin {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    height: 400px;
+    padding-left: 600px;
+    padding-right: 600px;
 }
-.localLogin > input{
-  display: inline;
-  width: 200px;
-  cursor: text;
+.localLogin > div > input {
+    width: 100%;
+    cursor: text;
 }
-button{
-  background:$darkGray;
-  color:white;
+h3 {
+    font-family: 'Roboto Mono', sans-serif;
+    color: $borderGray;
+    text-align: center;
+    border: 50px;
+    padding: 10px;
+}
+.inputBox {
+    height: 70px;
+}
+input {
+    border-radius: 10px;
 }

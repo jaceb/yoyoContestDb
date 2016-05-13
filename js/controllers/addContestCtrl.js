@@ -13,5 +13,15 @@ module.exports = {
 
         })
     },
-    
+
+    Read: function(req, res, next){
+      Product.find().exec(funtion(err, response){
+        if(err){
+          res.status(500).json(err);
+        }
+        else{
+          res.status(200).json(response);
+        }
+      })
+    },
 }

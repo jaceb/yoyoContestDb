@@ -5,7 +5,7 @@ $shade: #29292a;
 select{
   cursor: pointer;
   font-family: 'Roboto Mono', sans-serif;
-  
+
 
 }
 .phonyData {
@@ -17,6 +17,18 @@ select{
     height: 60px;
     width: 200px;
     padding: 10px;
+    background: $darkGray;
+    border-radius: 2px;
+    border-right: $borderGray solid 2px;
+    border-left: $borderGray solid 2px;
+    border-top: $backColor solid 2px;
+
+}
+.buttonBox {
+    height: 60px;
+    width: 200px;
+    padding-top: 20px;
+    padding-left: 5px;
     background: $darkGray;
     border-radius: 2px;
     border-right: $borderGray solid 2px;
