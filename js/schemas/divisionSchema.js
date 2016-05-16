@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var divisionSchema = Schema({
+var divisionSchema = new Schema({
   division: {type: String},
-  player: [{type: Schema.Types.Objects, ref: "Player"}],
-  contest:[{type: Schema.Types.ObjectId, ref:"Contest"}]
+  player: [{type: Schema.Types.ObjectId, ref: "Player"}]
 
 })
 

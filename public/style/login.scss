@@ -9,22 +9,30 @@ $shade: #29292a;
 }
 .facebookLoginButton {
     cursor: pointer;
-    position: absolute;
-    bottom: 100px;
-    right: 42%;
+    bottom: 15%;
+    text-align: center;
+
 }
 .localLogin {
     width: 100%;
-    position: absolute;
     top: 200px;
-    text-align: center;
     height: 400px;
-    padding-left: 600px;
-    padding-right: 600px;
+    padding-left: 650px;
+    padding-right: 650px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .localLogin > div > input {
     width: 100%;
     cursor: text;
+}
+h1 {
+    font-family: 'Roboto Mono', sans-serif;
+    color: $borderGray;
+    text-align: center;
+    border: 50px;
+    padding: 10px;
 }
 h3 {
     font-family: 'Roboto Mono', sans-serif;
@@ -35,7 +43,11 @@ h3 {
 }
 .inputBox {
     height: 70px;
+    width: 200px;
+    text-align: center;
+
 }
 input {
     border-radius: 10px;
+    width: 150px;
 }

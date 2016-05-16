@@ -7,7 +7,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var port = 4000;
 var keys = require('./js/keys.js');
+var addContestCtrl = require("./js/controllers/addContestCtrl");
+var addDivisionCtrl = require("./js/controllers/addDivisionCtrl");
+var addPlayerCtrl = require("./js/controllers/addPlayerCtrl");
 
+app.use(bodyParser.json());
 app.use(session({secret: 'not quite sure what these words are for', saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -32,6 +36,14 @@ passport.serializeUser(function(user, done){
 passport.deserializeUser(function(obj, done){
   done(null, obj);
 });
+
+app.post('/api/contests', addContestCtrl.Create);
+app.get('/api/contests', addContestCtrl.Read);
+app.post('/api/divisions', addDivisionCtrl.Create);
+app.get('/api/divisions', addDivisionCtrl.Read);
+app.post('/api/players', addPlayerCtrl.Create);
+app.get('/api/players', addPlayerCtrl.Read);
+app.delete('/api/players/:id', addPlayerCtrl.Delete);
 
 mongoose.connect('mongodb://localhost/contestData')
 mongoose.connection.once("open", function(){

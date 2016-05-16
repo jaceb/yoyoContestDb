@@ -1,15 +1,16 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var playerSchema = Schema({
-  name: {type: String},
-  finalScore: {type: Number, max: 100 },
-  techExec: {type: Number, max: 60},
-  techEval: {type: Number, max: 20},
-  performanceEval: {type: Number, max:20}
-  deductions: {type: Number},
-  contest:[{type: Schema.Types.ObjectId, ref:"Contest"}],
-  division: {type: Schema.Types.Objects, ref:"Division"}
+var playerSchema = new Schema({
+  name: {type: String, require: true},
+  place: {type: Number},
+  finalScore: {type: Number},
+  techExec: {type: Number},
+  techEval: {type: Number},
+  performanceEval: {type: Number},
+  deductions: {type: Number}
+  // contest:[{type: Schema.Types.ObjectId, ref:"Contest"}],
+  // division: {type: Schema.Types.ObjectId, ref:"Division"}
 })
 
 module.exports = mongoose.model('Player', playerSchema);

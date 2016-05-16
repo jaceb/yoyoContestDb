@@ -6,7 +6,7 @@ module.exports = {
         var newContest = new Contest(req.body);
         newContest.save(function(err, response) {
             if (err) {
-                res.status(500).json(err;)
+                res.status(500).json(err);
             } else {
                 res.status(200).json(response)
             }
@@ -15,7 +15,7 @@ module.exports = {
     },
 
     Read: function(req, res, next){
-      Product.find().exec(funtion(err, response){
+      Contest.find().exec(function(err, response){
         if(err){
           res.status(500).json(err);
         }
