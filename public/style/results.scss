@@ -44,3 +44,21 @@ select{
   -webkit-filter: grayscale(70%);
   opacity: 0.65;
 }
+ui{
+  font-family: 'Roboto Mono', sans-serif;
+  color: white;
+}
+.resultTable{
+  border: $borderGray solid 2px;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  width: 500px;
+}
+tr:nth-child(even) {
+  background-color: $borderGray;
+
+}
+tr:nth-child(odd) {
+  color: $borderGray;
+}

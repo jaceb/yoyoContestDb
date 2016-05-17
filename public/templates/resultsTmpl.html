@@ -1,8 +1,8 @@
 <div class="phonyData">
-<div class="resultHeader">
+    <div class="resultHeader">
 
-<img src="./jtpic.jpg" alt="" />
-</div>
+        <img src="./jtpic.jpg" alt="" />
+    </div>
     <div class="box">
 
         <select class="" name="">
@@ -14,6 +14,7 @@
 
         <select class="" name="">
             <option value="Division">Division</option>
+            <!-- <option ng-repeat="item in contests">{{item.division}}</option> -->
         </select>
     </div>
     <div class="box">
@@ -28,8 +29,13 @@
     <div class="buttonBox">
         <button type="button" name="button">Get Results</button>
     </div>
+    <table class="resultTable">
 
-    <!-- <ul>
-  <li ng-repeat></li>
-</ul> -->
+        <tr ng-repeat="item in contests">
+            <td>{{item.year}}</td>
+            <td>{{item.contestName}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.division}}</td>
+    </table>
+
 </div>

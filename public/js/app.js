@@ -9,7 +9,7 @@ angular.module('myApp', ['ui.router'])
             })
             .state('results', {
                 url: '/results',
-                // controller: 'welcomeCtrl',
+                controller: 'mainCtrl',
                 templateUrl: 'templates/resultsTmpl.html'
             })
             .state('login', {
