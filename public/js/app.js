@@ -19,7 +19,7 @@ angular.module('myApp', ['ui.router'])
             })
             .state('dashboard', {
                 url: '/dashboard',
-                // controller: 'dashCtrl',
+                controller: 'mainCtrl',
                 templateUrl: 'templates/dashTmpl.html'
             })
             .state('admin', {

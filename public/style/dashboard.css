@@ -2,8 +2,14 @@
   height: 200px;
   position: absolute;
   top: 101px;
-  left: 20%;
+  left: 12%;
   -webkit-filter: grayscale(70%);
   opacity: 0.65; }
+
+.dashResultDiv div:nth-child(even) {
+  background-color: #3b3a3c; }
+
+.dashResultDiv div:nth-child(odd) {
+  color: #858686; }
 
 /*# sourceMappingURL=dashboard.css.map */

@@ -2,36 +2,31 @@ $backColor: #151418;
 $darkGray: #3b3a3c;
 $borderGray: #858686;
 $shade: #29292a;
-.loginMain {
-    text-align: center;
-    color: $borderGray;
-    font-size: 32px;
+.dashHeader > img{
+  height:200px;
 }
 .facebookLoginButton {
     cursor: pointer;
-    bottom: 15%;
-    text-align: center;
-
-}
-.localLogin {
+    bottom: 20%;
     width: 100%;
-    top: 200px;
-    height: 400px;
-    padding-left: 650px;
-    padding-right: 650px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
 }
-.localLogin > div > input {
-    width: 100%;
-    cursor: text;
+.centerBox{
+  border: 2px solid $borderGray;
+  background: radial-gradient($darkGray, $backColor);
+  border-radius: 8px;
+  width: 205px;
+  height: 300px;
+  left: 580px;
+  top:130px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
 }
 h1 {
     font-family: 'Roboto Mono', sans-serif;
     color: $borderGray;
     text-align: center;
-    border: 50px;
+    border: 30px;
     padding: 10px;
 }
 h3 {

@@ -2,7 +2,20 @@ $backColor: #151418;
 $darkGray: #3b3a3c;
 $borderGray: #858686;
 $shade: #29292a;
-.addContestBox{
-  text-align: center;
+.mainAddContestBox{
+  position: absolute;
+  left: 400px;
   color: $borderGray;
+}
+#addContestTable{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.addContestOption{
+
+}
+table div:nth-child(even) {
+  background-color: $darkGray;
+
 }

@@ -2,20 +2,20 @@ select {
   cursor: pointer;
   font-family: 'Roboto Mono', sans-serif; }
 
-.phonyData {
+.resultMain {
   position: absolute;
   top: 220px;
   left: 10px; }
 
-.box {
-  height: 60px;
+.filterBox {
+  top: 50px;
+  position: absolute;
+  height: 80px;
   width: 200px;
-  padding: 10px;
   background: #3b3a3c;
   border-radius: 2px;
-  border-right: #858686 solid 2px;
-  border-left: #858686 solid 2px;
-  border-top: #151418 solid 2px; }
+  border: #858686 solid 2px;
+  text-align: center; }
 
 .buttonBox {
   height: 60px;
@@ -36,21 +36,29 @@ select {
   -webkit-filter: grayscale(70%);
   opacity: 0.65; }
 
-ui {
-  font-family: 'Roboto Mono', sans-serif;
-  color: white; }
+table {
+  border: #858686 solid 2px;
+  left: 300px;
+  top: 50px;
+  width: 750px; }
 
-.resultTable {
+.dashResultDiv {
   border: #858686 solid 2px;
   position: absolute;
   left: 300px;
-  top: 50px;
-  width: 500px; }
+  top: 300px;
+  width: 750px;
+  height: 300px; }
 
-tr:nth-child(even) {
-  background-color: #858686; }
+.dashResultDiv > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
 
-tr:nth-child(odd) {
+table tr:nth-child(even) {
+  background-color: #3b3a3c; }
+
+table tr:nth-child(odd) {
   color: #858686; }
 
 /*# sourceMappingURL=results.css.map */

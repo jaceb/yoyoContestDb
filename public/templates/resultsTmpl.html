@@ -1,41 +1,29 @@
-<div class="phonyData">
+<div class="resultMain">
     <div class="resultHeader">
 
         <img src="./jtpic.jpg" alt="" />
     </div>
-    <div class="box">
 
-        <select class="" name="">
-            <option value="Contest">Contest</option>
-        </select>
+
+    <div class="filterBox">
+        <h3>Search</h3>
+
+        <input ng-model="filterValue">
+        </input>
     </div>
 
-    <div class="box">
 
-        <select class="" name="">
-            <option value="Division">Division</option>
-            <!-- <option ng-repeat="item in contests">{{item.division}}</option> -->
-        </select>
-    </div>
-    <div class="box">
 
-        <select class="" name="">
+    <div ng-repeat="item in contests | filter: filterValue">
+        <input type="checkbox">
 
-            <option value="Player">Player</option>
+        <td>{{item.year}}</td>
+        <td>{{item.contestName}}</td>
+        <td>{{item.country}}</td>
+        <td>{{item.player}}</td>
 
-        </select>
 
     </div>
-    <div class="buttonBox">
-        <button type="button" name="button">Get Results</button>
-    </div>
-    <table class="resultTable">
 
-        <tr ng-repeat="item in contests">
-            <td>{{item.year}}</td>
-            <td>{{item.contestName}}</td>
-            <td>{{item.country}}</td>
-            <td>{{item.division}}</td>
-    </table>
 
 </div>

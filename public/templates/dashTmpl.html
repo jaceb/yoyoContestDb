@@ -1,3 +1,15 @@
 <div class="dashHeader">
-  <img src="./jtpic.jpg" alt="Picture of JT Nickel at the Idaho State yoyo contest" />
+    <img src="./utPic.jpg" alt="Picture of Players at the Utah State Yoyo Contest" />
+</div>
+<div class="dashResultDiv">
+
+    <div ng-repeat="item in contests">
+        <input type="checkbox">
+
+        <div>{{item.year}}</div>
+        <div>{{item.contestName}}</div>
+        <div>{{item.country}}</div>
+        <div>{{item.player}}</div>
+
+    </div>
 </div>

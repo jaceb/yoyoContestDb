@@ -8,21 +8,20 @@ select{
 
 
 }
-.phonyData {
+.resultMain {
     position: absolute;
     top: 220px;
     left: 10px;
 }
-.box {
-    height: 60px;
+.filterBox {
+  top: 50px;
+  position: absolute;
+    height: 80px;
     width: 200px;
-    padding: 10px;
     background: $darkGray;
     border-radius: 2px;
-    border-right: $borderGray solid 2px;
-    border-left: $borderGray solid 2px;
-    border-top: $backColor solid 2px;
-
+    border: $borderGray solid 2px;
+    text-align: center;
 }
 .buttonBox {
     height: 60px;
@@ -44,21 +43,35 @@ select{
   -webkit-filter: grayscale(70%);
   opacity: 0.65;
 }
-ui{
-  font-family: 'Roboto Mono', sans-serif;
-  color: white;
+// ui-route{
+//   font-family: 'Roboto Mono', sans-serif;
+//   color: white;
+// }
+table{
+  border: $borderGray solid 2px;
+  left: 300px;
+  top: 50px;
+  width: 750px;
+
+
 }
-.resultTable{
+.dashResultDiv{
   border: $borderGray solid 2px;
   position: absolute;
   left: 300px;
-  top: 50px;
-  width: 500px;
+  top: 300px;
+  width: 750px;
+  height: 300px;
 }
-tr:nth-child(even) {
-  background-color: $borderGray;
+.dashResultDiv > div{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+}
+table tr:nth-child(even) {
+  background-color: $darkGray;
 
 }
-tr:nth-child(odd) {
+table tr:nth-child(odd) {
   color: $borderGray;
 }

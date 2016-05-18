@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAIA,cAAc;EACZ,UAAU,EAAE,MAAM;EAClB,KAAK,EAJM,OAAO",
+"mappings": "AAIA,kBAAkB;EAChB,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,KAAK;EACX,KAAK,EALM,OAAO;;AAOpB,gBAAgB;EACd,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,YAAY;;AAK/B,yBAA0B;EACxB,gBAAgB,EAjBP,OAAO",
 "sources": ["addContest.scss"],
 "names": [],
 "file": "addContest.css"

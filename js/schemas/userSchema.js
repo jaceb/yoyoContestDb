@@ -4,6 +4,6 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
   email:{ type:String, Unique:true },
-  password:{type: String, min:8}
-
+  password:{type: String, min:8},
+  favorites:[{type: String}]
 })

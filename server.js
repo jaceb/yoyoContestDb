@@ -12,44 +12,48 @@ var addDivisionCtrl = require("./js/controllers/addDivisionCtrl");
 var addPlayerCtrl = require("./js/controllers/addPlayerCtrl");
 
 app.use(bodyParser.json());
-app.use(session({secret: 'not quite sure what these words are for', saveUninitialized: true}));
+app.use(session({
+    secret: 'not quite sure what these words are for',
+    saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname + "/public"));
 
 passport.use(new FacebookStrategy({
-  clientID: keys.facebookKey,
-  clientSecret: keys.facebookSecret,
-  callbackURL: 'http://localhost:4000/auth/facebook/callback',
-}, function(token, refreshToken, profile, done){
-  return done(null, profile);
+    clientID: keys.facebookKey,
+    clientSecret: keys.facebookSecret,
+    callbackURL: 'http://localhost:4000/auth/facebook/callback',
+}, function(token, refreshToken, profile, done) {
+    return done(null, profile);
 }));
 app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-  successRedirect: '/#/dashboard',
-  failureRedirect: '/auth/facebook'
+    successRedirect: '/#/dashboard',
+    failureRedirect: '/auth/facebook'
 }))
-passport.serializeUser(function(user, done){
-  done(null, user);
+passport.serializeUser(function(user, done) {
+    done(null, user);
 });
 
-passport.deserializeUser(function(obj, done){
-  done(null, obj);
+passport.deserializeUser(function(obj, done) {
+    done(null, obj);
 });
 
 app.post('/api/contests', addContestCtrl.Create);
 app.get('/api/contests', addContestCtrl.Read);
 app.post('/api/divisions', addDivisionCtrl.Create);
 app.get('/api/divisions', addDivisionCtrl.Read);
+app.put('/api/divisions', addDivisionCtrl.Update);
 app.post('/api/players', addPlayerCtrl.Create);
 app.get('/api/players', addPlayerCtrl.Read);
 app.delete('/api/players/:id', addPlayerCtrl.Delete);
 
 mongoose.connect('mongodb://localhost/contestData')
-mongoose.connection.once("open", function(){
-  console.log("connecting to yoyo database");
+mongoose.connection.once("open", function() {
+    console.log("connecting to yoyo database");
 });
 
-app.listen(port, function(){
-  console.log("Easy listening on port " + port + ": the breeze");
+app.listen(port, function() {
+    console.log("Easy listening on port " + port + ": the breeze");
 })

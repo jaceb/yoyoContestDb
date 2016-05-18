@@ -8,9 +8,8 @@ var playerSchema = new Schema({
   techExec: {type: Number},
   techEval: {type: Number},
   performanceEval: {type: Number},
-  deductions: {type: Number}
-  // contest:[{type: Schema.Types.ObjectId, ref:"Contest"}],
-  // division: {type: Schema.Types.ObjectId, ref:"Division"}
+  deductions: {type: Number},
+  division: {type: Schema.Types.ObjectId, ref:"Division"}
 })
 
 module.exports = mongoose.model('Player', playerSchema);

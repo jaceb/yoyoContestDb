@@ -1,5 +1,14 @@
-.addContestBox {
-  text-align: center;
+.mainAddContestBox {
+  position: absolute;
+  left: 400px;
   color: #858686; }
+
+#addContestTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+table div:nth-child(even) {
+  background-color: #3b3a3c; }
 
 /*# sourceMappingURL=addContest.css.map */
