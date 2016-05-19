@@ -10,10 +10,10 @@ $shade: #29292a;
   left:12%;
   -webkit-filter: grayscale(70%);
   opacity: 0.65;
+  text-align: center;
 }
 .dashResultDiv{
-  // display: flex;
-  // flex-direction: column;
+height: 300px;
 }
 .dashResultDiv div:nth-child(even) {
   background-color: $darkGray;
@@ -21,4 +21,7 @@ $shade: #29292a;
 }
 .dashResultDiv div:nth-child(odd) {
   color: $borderGray;
+}
+.repeatData{
+  text-align: center;
 }

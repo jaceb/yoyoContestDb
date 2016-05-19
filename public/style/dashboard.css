@@ -4,12 +4,19 @@
   top: 101px;
   left: 12%;
   -webkit-filter: grayscale(70%);
-  opacity: 0.65; }
+  opacity: 0.65;
+  text-align: center; }
+
+.dashResultDiv {
+  height: 300px; }
 
 .dashResultDiv div:nth-child(even) {
   background-color: #3b3a3c; }
 
 .dashResultDiv div:nth-child(odd) {
   color: #858686; }
+
+.repeatData {
+  text-align: center; }
 
 /*# sourceMappingURL=dashboard.css.map */

@@ -14,10 +14,20 @@ select{
     left: 10px;
 }
 .filterBox {
-  top: 50px;
-  position: absolute;
-    height: 80px;
+  // top: 50px;
+  // position: absolute;
+    height: 100px;
     width: 200px;
+    background: $darkGray;
+    border-radius: 2px;
+    border: $borderGray solid 2px;
+    text-align: center;
+}
+.bottomFilterBox {
+
+    height: 50px;
+    width: 200px;
+    padding-top: 10px;
     background: $darkGray;
     border-radius: 2px;
     border: $borderGray solid 2px;
@@ -43,17 +53,16 @@ select{
   -webkit-filter: grayscale(70%);
   opacity: 0.65;
 }
-// ui-route{
-//   font-family: 'Roboto Mono', sans-serif;
-//   color: white;
-// }
+.resultHeader > img{
+  width:100%;
+}
+
 table{
   border: $borderGray solid 2px;
-  left: 300px;
-  top: 50px;
-  width: 750px;
-
-
+  width: 900px;
+  text-align: left;
+  float: left;
+  color:white;
 }
 .dashResultDiv{
   border: $borderGray solid 2px;
@@ -68,10 +77,31 @@ table{
   flex-wrap:wrap;
   justify-content: flex-start;
 }
-table tr:nth-child(even) {
+table:nth-child(even) {
   background-color: $darkGray;
 
 }
-table tr:nth-child(odd) {
+table:nth-child(odd) {
   color: $borderGray;
+}
+td{
+  float: left;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border: 2px solid $borderGray;
+
+}
+td > input{
+  width: 300px;
+}
+th{
+  border: 3px solid white;
+  width: 300px;
+  text-align: center;
+  background:linear-gradient(#5f618f, #3e3246);
+  color:white;
+}
+#playerId{
+  width:900px;
 }
