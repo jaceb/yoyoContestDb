@@ -39,12 +39,12 @@ select {
   height: 200px;
   position: absolute;
   top: -110px;
-  left: 250px;
-  -webkit-filter: grayscale(70%);
-  opacity: 0.65; }
+  left: 250px; }
 
 .resultHeader > img {
-  width: 100%; }
+  width: 100%;
+  -webkit-filter: grayscale(70%);
+  opacity: 0.65; }
 
 table {
   border: #858686 solid 2px;

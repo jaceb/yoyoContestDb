@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 var port = 4000;
 var keys = require('./js/keys.js');
 var addContestCtrl = require("./js/controllers/addContestCtrl");
-var addDivisionCtrl = require("./js/controllers/addDivisionCtrl");
-var addPlayerCtrl = require("./js/controllers/addPlayerCtrl");
+var loginCtrl = require("./js/controllers/loginCtrl");
+
 
 app.use(bodyParser.json());
 app.use(session({
@@ -42,12 +42,8 @@ passport.deserializeUser(function(obj, done) {
 
 app.post('/api/contests', addContestCtrl.Create);
 app.get('/api/contests', addContestCtrl.Read);
-app.post('/api/divisions', addDivisionCtrl.Create);
-app.get('/api/divisions', addDivisionCtrl.Read);
-app.put('/api/divisions', addDivisionCtrl.Update);
-app.post('/api/players', addPlayerCtrl.Create);
-app.get('/api/players', addPlayerCtrl.Read);
-app.delete('/api/players/:id', addPlayerCtrl.Delete);
+app.post('/api/users', loginCtrl.Create);
+
 
 mongoose.connect('mongodb://localhost/contestData')
 mongoose.connection.once("open", function() {

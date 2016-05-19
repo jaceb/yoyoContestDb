@@ -3,13 +3,14 @@ $darkGray: #3b3a3c;
 $borderGray: #858686;
 $shade: #29292a;
 
+.dashHeader > img{
+  -webkit-filter: grayscale(70%);
+  opacity: 0.65;
+}
 .dashHeader{
   height: 200px;
   position: absolute;
-  top: 101px;
-  left:12%;
-  -webkit-filter: grayscale(70%);
-  opacity: 0.65;
+  top: 101px;left: 12%;
   text-align: center;
 }
 .dashResultDiv{

@@ -4,18 +4,50 @@ $borderGray: #858686;
 $shade: #29292a;
 .mainAddContestBox{
   position: absolute;
-  left: 400px;
+  left: 330px;
+  top:100px;
   color: $borderGray;
-}
-#addContestTable{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  border:8px solid $borderGray;
+
 }
 .addContestOption{
+display: flex;
+justify-content: flex-end;
+flex-direction: column;
+border-radius: 10px;
+position: absolute;
+border: 4px solid $borderGray;
+top: 225px;
 
 }
-table div:nth-child(even) {
-  background-color: $darkGray;
+.addContestOption > input{
+  border-radius: 0;
+  width:700px;
 
+}
+.addContestOption input:nth-child(even) {
+  background-color: #e0e0e0;
+
+}
+.addContestHeader{
+  // background:linear-gradient(#5f618f, #3e3246);
+  background-image: url("../centerYo.jpg");
+  opacity: .8;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 265px;
+  height:200px;
+  width: 840px;
+  padding-top: 20px;
+}
+.addContestHeader > h1{
+color: white;
+}
+#subButton{
+  width: 100px;
+  position: absolute;
+  left: 42%;
+  border:4px solid $borderGray;
+
+  border-radius: 4px;
 }

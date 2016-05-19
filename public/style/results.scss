@@ -50,11 +50,12 @@ select{
   position: absolute;
   top: -110px;
   left:250px;;
-  -webkit-filter: grayscale(70%);
-  opacity: 0.65;
+
 }
 .resultHeader > img{
   width:100%;
+  -webkit-filter: grayscale(70%);
+  opacity: 0.65;
 }
 
 table{

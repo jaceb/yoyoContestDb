@@ -15,7 +15,7 @@ module.exports = {
     },
 
     Read: function(req, res, next){
-      Contest.find().populate("division.player.").exec(function(err, response){
+      Contest.find().populate("division.player").exec(function(err, response){
         if(err){
           res.status(500).json(err);
         }
