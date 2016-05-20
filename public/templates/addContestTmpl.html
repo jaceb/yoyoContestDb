@@ -7,27 +7,27 @@
 
 
     <div class="addContestOption">
-        <input type="text" placeholder="Contest Name">
+        <input type="text" placeholder="Contest Name" ng-model="newContest.contestName">
 
-        <input type="text" placeholder="year">
+        <input type="text" placeholder="year" ng-model="newContest.year">
 
-        <input type="text" placeholder="region">
+        <input type="text" placeholder="country" ng-model="newContest.country">
 
-        <input type="text" placeholder="Player1">
+        <input type="text" placeholder="Player1" ng-model="playersArr[0]">
 
-        <input type="text" placeholder="Player2">
+        <input type="text" placeholder="Player2" ng-model="playersArr[1]">
 
-        <input type="text" placeholder="Player3">
+        <input type="text" placeholder="Player3" ng-model="playersArr[2]">
 
-        <input type="text" placeholder="Player4">
-        <input type="text" placeholder="Player5">
-        <input type="text" placeholder="Player6">
+        <input type="text" placeholder="Player4" ng-model="playersArr[3]">
+        <input type="text" placeholder="Player5" ng-model="playersArr[4]">
+        <input type="text" placeholder="Player6" ng-model="playersArr[5]">
 
-        <input type="text" placeholder="Player7">
-        <input type="text" placeholder="Player8">
+        <input type="text" placeholder="Player7" ng-model="playersArr[6]">
+        <input type="text" placeholder="Player8" ng-model="playersArr[7]">
 
 
-        <input id="subButton" type="button" value="submit" ng-click="">
+        <input id="subButton" type="button" value="submit" ng-click="addContest(newContest, players)">
 
 
     </div>

@@ -22,14 +22,10 @@ angular.module('myApp', ['ui.router'])
                 controller: 'mainCtrl',
                 templateUrl: 'templates/dashTmpl.html'
             })
-            .state('admin', {
-                url: '/admin',
-                // controller: 'adminCtrl',
-                templateUrl: 'templates/adminTmpl.html'
-            })
+            
             .state('addContest', {
                 url: '/addContest',
-                // controller: 'addContestCtrl',
+                controller: 'mainCtrl',
                 templateUrl: 'templates/addContestTmpl.html'
             });
         $urlRouterProvider

@@ -9,15 +9,15 @@
             <th>country</th>
         </table>
 
-        <table ng-repeat="item in contests | filter: filterValue">
+        <table ng-repeat="item in contests | filter:filterValue">
 
             <td>{{item.year}}</td>
 
             <td> {{item.contestName}}
-                <button id="buttonId" type="button"  ng-click="favUser(item)">Add to Favorites</button>
+                <button id="buttonId" type="button"  ng-click="$scope.addFavorite(item.id)">Add to Favorites</button>
             </td>
             <td>{{item.country}}</td>
-            <td id="personBox" ng-repeat="person in item.player">{{person}}</td>
+            <td id="personBox" ng-repeat="person in item.player track by $index">{{person}}</td>
 
 
         </table>
