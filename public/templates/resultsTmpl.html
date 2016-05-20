@@ -2,20 +2,22 @@
     <div class="resultHeader">
 
         <img src="./jtpic.jpg" alt="" />
-<table>
+        <table>
 
-        <th>Year</th>
-        <th>contest  </th>
-        <th>country</th>
-      </table>
+            <th>Year</th>
+            <th>contest </th>
+            <th>country</th>
+        </table>
 
         <table ng-repeat="item in contests | filter: filterValue">
 
             <td>{{item.year}}</td>
 
-            <td><input type="checkbox">{{item.contestName}}</td>
+            <td> {{item.contestName}}
+                <button id="buttonId" type="button"  ng-click="favUser(item)">Add to Favorites</button>
+            </td>
             <td>{{item.country}}</td>
-            <td id="playerId">{{item.player}}</td>
+            <td id="personBox" ng-repeat="person in item.player">{{person}}</td>
 
 
         </table>
@@ -27,9 +29,7 @@
 
         <input ng-model="filterValue"></input>
     </div>
-    <div class="bottomFilterBox">
-      <button type="button">Add to Favorites</button>
-    </div>
+
 
 
 

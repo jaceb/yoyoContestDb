@@ -8,17 +8,10 @@ select {
   left: 10px; }
 
 .filterBox {
+  top: 210px;
+  position: fixed;
   height: 100px;
   width: 200px;
-  background: #3b3a3c;
-  border-radius: 2px;
-  border: #858686 solid 2px;
-  text-align: center; }
-
-.bottomFilterBox {
-  height: 50px;
-  width: 200px;
-  padding-top: 10px;
   background: #3b3a3c;
   border-radius: 2px;
   border: #858686 solid 2px;
@@ -47,24 +40,11 @@ select {
   opacity: 0.65; }
 
 table {
-  border: #858686 solid 2px;
+  border: #858686 solid 3px;
   width: 900px;
   text-align: left;
   float: left;
   color: white; }
-
-.dashResultDiv {
-  border: #858686 solid 2px;
-  position: absolute;
-  left: 300px;
-  top: 300px;
-  width: 750px;
-  height: 300px; }
-
-.dashResultDiv > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
 
 table:nth-child(even) {
   background-color: #3b3a3c; }
@@ -74,10 +54,13 @@ table:nth-child(odd) {
 
 td {
   float: left;
-  width: 300px;
-  height: 50px;
+  width: 298px;
+  height: 70px;
   text-align: center;
-  border: 2px solid #858686; }
+  border: 2px solid #858686;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 td > input {
   width: 300px; }
@@ -91,5 +74,14 @@ th {
 
 #playerId {
   width: 900px; }
+
+#buttonId {
+  width: 150px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 5px; }
+
+#personBox {
+  border: none; }
 
 /*# sourceMappingURL=results.css.map */

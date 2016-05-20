@@ -10,11 +10,9 @@ $shade: #29292a;
 .dashHeader{
   height: 200px;
   position: absolute;
-  top: 101px;left: 12%;
+  top: 101px;
+  left: 13%;
   text-align: center;
-}
-.dashResultDiv{
-height: 300px;
 }
 .dashResultDiv div:nth-child(even) {
   background-color: $darkGray;
@@ -25,4 +23,17 @@ height: 300px;
 }
 .repeatData{
   text-align: center;
+}
+.dashResultDiv{
+  border: $borderGray solid 2px;
+  position: absolute;
+  left: 220px;
+  top: 300px;
+  width: 900px;
+  height: 290px;
+}
+.dashResultDiv > div{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
 }

@@ -6,11 +6,8 @@
   height: 200px;
   position: absolute;
   top: 101px;
-  left: 12%;
+  left: 13%;
   text-align: center; }
-
-.dashResultDiv {
-  height: 300px; }
 
 .dashResultDiv div:nth-child(even) {
   background-color: #3b3a3c; }
@@ -20,5 +17,18 @@
 
 .repeatData {
   text-align: center; }
+
+.dashResultDiv {
+  border: #858686 solid 2px;
+  position: absolute;
+  left: 220px;
+  top: 300px;
+  width: 900px;
+  height: 290px; }
+
+.dashResultDiv > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
 
 /*# sourceMappingURL=dashboard.css.map */

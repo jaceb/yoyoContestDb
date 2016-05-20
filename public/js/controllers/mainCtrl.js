@@ -5,4 +5,11 @@ angular.module("myApp").controller("mainCtrl", function($scope, mainService) {
         })
     }
     $scope.getContest();
+
+    $scope.getUser = function(){
+      mainService.getUser().then(function(response){
+        $scope.user = response[0];
+      })
+    }
+    $scope.getUser();
 });

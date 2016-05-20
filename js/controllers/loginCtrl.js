@@ -1,10 +1,10 @@
-var CreateUser = require("../schemas/userSchema.js");
+var User = require("../schemas/userSchema.js");
 
 module.exports = {
 
     Create: function(req, res, next) {
-        var newContest = new Contest(req.body);
-        newContest.save(function(err, response) {
+        var newUser = new User (req.body);
+        newUser.save(function(err, response) {
             if (err) {
                 res.status(500).json(err);
             } else {
@@ -15,7 +15,7 @@ module.exports = {
     },
 
     Read: function(req, res, next){
-      Contest.find().populate("user.favorites").exec(function(err, response){
+      User.find().populate("favorites").exec(function(err, response){
         if(err){
           res.status(500).json(err);
         }
@@ -23,5 +23,14 @@ module.exports = {
           res.status(200).json(response);
         }
       })
+    },
+    ReadId: function(req, res, next){
+        User.findById(req.params.id).populate({path: 'user.favorites'}).exec(function(err, response){
+            if(err){
+                res.status(500).json(err);
+            }else{
+                res.status(200).json(response);
+            }
+        })
     },
 }

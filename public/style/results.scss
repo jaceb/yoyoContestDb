@@ -14,20 +14,10 @@ select{
     left: 10px;
 }
 .filterBox {
-  // top: 50px;
-  // position: absolute;
+  top: 210px;
+  position: fixed;
     height: 100px;
     width: 200px;
-    background: $darkGray;
-    border-radius: 2px;
-    border: $borderGray solid 2px;
-    text-align: center;
-}
-.bottomFilterBox {
-
-    height: 50px;
-    width: 200px;
-    padding-top: 10px;
     background: $darkGray;
     border-radius: 2px;
     border: $borderGray solid 2px;
@@ -59,25 +49,13 @@ select{
 }
 
 table{
-  border: $borderGray solid 2px;
+  border: $borderGray solid 3px;
   width: 900px;
   text-align: left;
   float: left;
   color:white;
 }
-.dashResultDiv{
-  border: $borderGray solid 2px;
-  position: absolute;
-  left: 300px;
-  top: 300px;
-  width: 750px;
-  height: 300px;
-}
-.dashResultDiv > div{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: flex-start;
-}
+
 table:nth-child(even) {
   background-color: $darkGray;
 
@@ -87,10 +65,14 @@ table:nth-child(odd) {
 }
 td{
   float: left;
-  width: 300px;
-  height: 50px;
+  width: 298px;
+  height: 70px;
   text-align: center;
   border: 2px solid $borderGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 
 }
 td > input{
@@ -105,4 +87,13 @@ th{
 }
 #playerId{
   width:900px;
+}
+#buttonId{
+  width: 150px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 5px;
+}
+#personBox{
+  border: none;
 }

@@ -43,7 +43,8 @@ passport.deserializeUser(function(obj, done) {
 app.post('/api/contests', addContestCtrl.Create);
 app.get('/api/contests', addContestCtrl.Read);
 app.post('/api/users', loginCtrl.Create);
-
+app.get('/api/users', loginCtrl.Read);
+app.get('api/users/:id', loginCtrl.ReadId);
 
 mongoose.connect('mongodb://localhost/contestData')
 mongoose.connection.once("open", function() {

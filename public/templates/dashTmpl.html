@@ -3,12 +3,25 @@
 </div>
 <div class="dashResultDiv">
 
-    <div ng-repeat="item in contests">
-        <input type="checkbox">
-        <div class="repeatData">{{item.contestName}}</div>
-        <div class="repeatData">{{item.year}}</div>
-        <div class="repeatData">{{item.country}}</div>
-        <div class="repeatData">{{item.player}}</div>
 
-    </div>
+
+
+            <table ng-repeat="specifics in user.favorites">
+
+                <td>
+                    {{specifics.year}}
+                </td>
+                <td> {{specifics.contestName}}
+                    <button id="buttonId" type="button" ng-click="favUser(item)">Remove</button>
+                </td>
+                <td>{{specifics.country}}</td>
+
+
+
+                <td id="personBox" ng-repeat="person in specifics.player">{{person}}</td>
+
+
+            </table>
+
+
 </div>
