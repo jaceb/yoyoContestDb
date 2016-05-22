@@ -7,7 +7,7 @@ var serverConfig = require("./serverConfig.js")
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var port = serverConfig.serverPort;
-var keys = require('./js/keys.js');
+var keys = require('./keys.js');
 var addContestCtrl = require("./js/controllers/addContestCtrl");
 var loginCtrl = require("./js/controllers/loginCtrl");
 
