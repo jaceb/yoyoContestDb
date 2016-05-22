@@ -1,5 +1,4 @@
 angular.module("myApp").controller("mainCtrl", function($scope, mainService) {
-    console.log("poop");
     $scope.getContest = function() {
         mainService.getContest().then(function(response) {
             $scope.contests = response;
@@ -31,10 +30,12 @@ angular.module("myApp").controller("mainCtrl", function($scope, mainService) {
     };
     $scope.getUser();
 
-    $scope.addFavorite = function(favorite) {
-        mainService.addFavorite(favorite).then(function(response) {
-            $scope.newFavorite = {};
-            $scope.getFavorites();
+    $scope.addFavorite = function(favorite, userId) {
+    // console.log(userId);
+        mainService.addFavorite(favorite, userId).then(function(response) {
+          console.log(response);
+            $scope.newFavorite = response;
+
         })
 
     }

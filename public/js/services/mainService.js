@@ -27,13 +27,13 @@ angular.module("myApp").service('mainService', function($http) {
         return response.data;
       })
     };
-    this.addFavorite = function(){
+    this.addFavorite = function(userId, favorite){
+// console.log(userId);
       return $http({
         method: "PUT",
-        url: "/api/user/addtofavorites/" + userId,
-        data: {
-          id: favorite._id,
-        }
+        url: "/favorites/" + userId,
+        data:{favorite}
+
       }).then(function(response){
         return response.data
       })

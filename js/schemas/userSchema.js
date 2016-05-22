@@ -12,7 +12,8 @@ var userSchema = new Schema({
         min: 8
     },
     favorites: [{
-        type: Schema.Types.ObjectId,
+
+      type: Schema.Types.ObjectId,
         ref: "Contest"
     }]
 })

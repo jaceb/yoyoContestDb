@@ -1,4 +1,5 @@
 var User = require("../schemas/userSchema.js");
+var Contest = require("../schemas/contestSchema.js");
 
 module.exports = {
 
@@ -36,13 +37,25 @@ module.exports = {
     },
 
     Update: function(req, res, next) {
-        User.findByIdAndUpdate(req.params.id, req.body, function(err, response) {
+      console.log("path", req.body);
+      Contest.findById(req.body.favorite).populate({path: 'favorites.contest'}).exec(function(err, response) {
+          if(err) {
+            console.log('1', err);
+          }
+          console.log('this?', response);
+          var favContest = response;
+
+
+        User.findOneAndUpdate({_id: req.params.id}, {$push:{'favorites': favContest}}, function(err, response) {
             if (err) {
+              console.log(err);
                 res.status(500).json(err);
             } else {
                 res.status(200).json(response);
 
             }
+        })
+
         })
     },
     Delete: function(req, res, next){

@@ -3,9 +3,10 @@ var session = require('express-session');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 var app = express();
+var serverConfig = require("./serverConfig.js")
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var port = 4000;
+var port = serverConfig.serverPort;
 var keys = require('./js/keys.js');
 var addContestCtrl = require("./js/controllers/addContestCtrl");
 var loginCtrl = require("./js/controllers/loginCtrl");
@@ -45,7 +46,7 @@ app.get('/api/contests', addContestCtrl.Read);
 app.post('/api/users', loginCtrl.Create);
 app.get('/api/users', loginCtrl.Read);
 app.get('api/users/:id', loginCtrl.ReadId);
-app.put('api/users/:id',loginCtrl.Update);
+app.put('/favorites/:id', loginCtrl.Update);
 app.delete('api/users/:id', loginCtrl.Delete)
 
 

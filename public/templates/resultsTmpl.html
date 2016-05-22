@@ -14,7 +14,7 @@
             <td>{{item.year}}</td>
 
             <td> {{item.contestName}}
-                <button id="buttonId" type="button"  ng-click="$scope.addFavorite(item.id)">Add to Favorites</button>
+                <button id="buttonId" type="button"  ng-click="addFavorite(item._id, user._id)">Add to Favorites</button>
             </td>
             <td>{{item.country}}</td>
             <td id="personBox" ng-repeat="person in item.player track by $index">{{person}}</td>
