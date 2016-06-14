@@ -7,10 +7,9 @@ body {
   opacity: 0.4;
   -webkit-filter: grayscale(50%);
   background-repeat: no-repeat;
-  height: 80%;
+  height: 500px;
   width: 85%;
-  left: 140px;
-  position: absolute; }
+  margin: auto !important; }
 
 .welcomeBackground h1 {
   color: white;
